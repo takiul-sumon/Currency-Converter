@@ -22,6 +22,8 @@ class _CurrencyconverterState extends State<Currencyconverter> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text('Currency Converter',style: TextStyle(fontSize: 16,fontWeight: FontWeight.w800,color: Colors.white),),centerTitle: true,backgroundColor: Colors.blueGrey,),
+      
       backgroundColor: Colors.blueGrey,
       body: Center(
         child: Column(
@@ -47,15 +49,18 @@ class _CurrencyconverterState extends State<Currencyconverter> {
                       Icons.monetization_on_outlined,
                       color: Colors.black,
                     ),
-                    focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white),
-                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                    // focusedBorder: OutlineInputBorder(
+                    //     borderSide: BorderSide(color: Colors.black),
+                    //     borderRadius: BorderRadius.all(Radius.circular(5)),
+                    //     ),
                     filled: true,
                     fillColor: Colors.white,
                     border: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.black,
-                      // width: 15.0,
+                      width: 10.0,
+                      style: BorderStyle.solid
                       ),
+                      borderRadius: BorderRadius.all(Radius.circular(10))
                     )),
               ),
             ),
@@ -69,26 +74,14 @@ class _CurrencyconverterState extends State<Currencyconverter> {
                     amount = amount * 120;
                   });
                 },
-                // style:  ButtonStyle(
-                //   backgroundColor: WidgetStatePropertyAll(Colors.black),
-                //   // textStyle:
-                //   //     MaterialStatePropertyAll(TextStyle(color: Colors.white)),
-                //   foregroundColor: MaterialStatePropertyAll(Colors.black),
-                //   // maximumSize: WidgetStatePropertyAll(BorderRadius.circular
-                // // fixedSize: WidgetStatePropertyAll(Size(420,20)),
-                // shape: WidgetStatePropertyAll(CircleBorder(side: RoundedRectangleBorder(borderRadius: BorderRadius.zero)))
+                
                 style: TextButton.styleFrom(
                     backgroundColor: Colors.black,
                     shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(3))),
                     fixedSize: Size(480, 45)),
 
-                // style: TextButton.styleFrom(
-                //   shape:const CircleBorder(side: BorderSide.none),
-                //   backgroundColor: Color(00000),
-                //   foregroundColor: Color(00000),
-                //   fixedSize:const Size(420, 20)
-                // ),
+                
 
                 child: const Text(
                   'Convert',
