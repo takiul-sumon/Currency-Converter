@@ -30,7 +30,7 @@ class _CurrencyconverterState extends State<Currencyconverter> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              '${amount}',
+              amount.toString(),
               style: const TextStyle(
                   color: Colors.white,
                   fontSize: 40,
